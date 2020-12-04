@@ -36,3 +36,15 @@ func PrintAll(s1 []int) {
 		print(s1[i])
 	}
 }
+
+// returns the largest int
+func LargestInt(num ...int) int {
+	numLen := len(num)
+	for j := 1; j < numLen; j++ {
+		if num[0] < num[j] {
+			num[0] = num[j]
+		}
+
+	}
+	return num[0]
+}

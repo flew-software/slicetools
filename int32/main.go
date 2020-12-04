@@ -36,3 +36,15 @@ func Print32All(s1 []int32) {
 		print(s1[i])
 	}
 }
+
+// returns the largest int32
+func LargestInt(num ...int32) int32 {
+	numLen := len(num)
+	for j := 1; j < numLen; j++ {
+		if num[0] < num[j] {
+			num[0] = num[j]
+		}
+
+	}
+	return num[0]
+}
